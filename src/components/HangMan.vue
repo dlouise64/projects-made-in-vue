@@ -1,8 +1,8 @@
 <template>
   <div id="hangman">
-    <img src="../assets/logo.png">
     <h1>Let's play Hangman!</h1>
-    <h2 v-show="playerWon" v-bind="winOrLose()">YOU WON</h2>
+
+    <h2 v-show="playerWon" v-bind="winOrLose()">YOU ARE A WINNER!</h2>
     <div v-show="playerLose" v-bind="winOrLose()">
       <h2>GAME OVER</h2>
       <p>The answer was: <strong>{{answer}}</strong></p>
@@ -11,14 +11,13 @@
     
     <div class="board">
       <div class="board__letter" v-for="letter in answer">
-        <span v-if="findInFound(letter)">{{letter}}</span>
+        <span v-if="findInFound(letter)" v-text="letter"></span>
         <span v-else>&nbsp;</span>
       </div>
     </div>
 
     <div class="alphabet">
-      <button v-for="i in alphabet" v-on:click="playTurn(i, $event)">{{i}}</button>
-    </div>
+      <button v-for="i in alphabet" v-on:click="playTurn(i, $event)"v-text="i"></button>
     </div>
   </div>
 </template>
@@ -28,7 +27,8 @@ export default {
   name: 'HangMan',
   data () {
     return {
-      answer: 'Programming',
+      answers: ['Programming', 'Twitter', 'Computer'],
+      answer: 'DanaLouiseIti',
       alphabet: 'abcdefghijklmnopqrstuvwxyz',
       foundLetters: [],
       counter: 12,
@@ -37,6 +37,13 @@ export default {
     }
   },
   methods: {
+    bla: function () {
+      return this.answers[Math.floor(Math.random() * this.answers.length)]
+    },
+    getRandomAnswer: function (answers) {
+      const newAnswer = answers[Math.floor(Math.random() * answers.length)]
+      this.answer = newAnswer
+    },
     findInFound: function (letter) {
       if (this.foundLetters.indexOf(letter.toLowerCase()) !== -1) {
         return true
@@ -65,9 +72,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
   #hangman {
     font-size: 20px;
   }
@@ -104,6 +109,8 @@ export default {
   }
 
   .counter { margin-bottom: 50px; }
+
+  /* Default Vue styles */
   h1, h2 {
     font-weight: normal;
   }
