@@ -1,6 +1,8 @@
 # projects-made-in-vue
 
-> A Vue.js project
+[DEMO](https://dlouise64.github.io/projects-made-in-vue)
+
+> Projects made in Vue.js
 
 ## Build Setup
 
