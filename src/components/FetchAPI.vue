@@ -23,7 +23,7 @@ import InfiniteLoading from 'vue-infinite-loading'
 import axios from 'axios'
 import Card from '@/components/admin/Card'
 
-const api = 'https://jsonplaceholder.typicode.com/posts'
+const api = `https://jsonplaceholder.typicode.com/posts`
 
 export default {
   name: 'FetchAPI',
@@ -35,7 +35,10 @@ export default {
   components: { Card, InfiniteLoading },
   methods: {
     infiniteHandler ($state) {
-      axios.get(api).then(({ data }) => {
+      let config = {
+        headers: {'Access-Control-Allow-Origin': '*'}
+      }
+      axios.get(api, config).then(({ data }) => {
         if (data.length) {
           this.list = this.list.concat(data)
           $state.loaded()
