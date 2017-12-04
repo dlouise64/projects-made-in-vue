@@ -70,6 +70,11 @@
   }
 </script>
 <style scoped>
+  h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
   ul {
     width: 520px;
     margin: 0 auto;

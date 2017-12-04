@@ -15,7 +15,10 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
+    "axios": "^0.17.1",
     "vue": "^2.5.2",
+    "vue-fetch-data": "^0.2.0",
+    "vue-infinite-loading": "^2.2.2",
     "vue-material-design-icons": "^0.7.1",
     "vue-router": "^3.0.1"
   },

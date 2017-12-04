@@ -1,11 +1,9 @@
 <template>
   <nav>
     <ul>
-      <li><router-link to="/">Main Menu</router-link></li>
-      <li><router-link to="hangman">Play Hangman</router-link></li>
-      <li><router-link to="fetch-api">Fetch API example</router-link></li>
-      <li><router-link to="github-commits">Github example</router-link></li>
-      <li><router-link to="todo">TODO example</router-link></li>
+      <li><router-link to="/">Fetch API Demo</router-link></li>
+      <li><router-link to="todo">Todo List Demo</router-link></li>
+      <li><router-link to="guess-the-word">Play Guess the word</router-link></li>
     </ul>
   </nav>
 </template>
