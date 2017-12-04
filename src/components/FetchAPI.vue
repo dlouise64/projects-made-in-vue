@@ -2,7 +2,6 @@
   <div class="section">
     <div class="container">
       <h1>Fetch API Demo</h1>
-      <section class="section">Fetch Url: <a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a></section>
       <div class="columns is-multiline">
         <div class="column is-one-quarter" v-for="(item, key) in list" v-bind:key="key">
           <Card :title="item.title" :body="item.body" v-bind:data="item"></Card>
@@ -55,8 +54,10 @@ export default {
 </script>
 
 <style scoped>
-  a {
-    color: #399b6e;
+  h1 {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 60px;
   }
 </style>
 

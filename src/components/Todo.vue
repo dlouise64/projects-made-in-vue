@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form>
+    <form v-on:submit.prevent>
       <input 
         type="text" 
         @keyup.enter="addToList" 
@@ -11,7 +11,7 @@
     </form>
     <h2>Incomplete Tasks</h2>
     <ul class="list-stripped">
-      <li v-for="task in incompleteTasks">
+      <li v-for="task in incompleteTasks" v-bind:key="task">
         {{task.description}}
         <span class="icon-sucess" @click="isComplete(task, true)">
           <CheckCircleIcon/>
@@ -20,7 +20,7 @@
     </ul>
     <h2>Completed Tasks</h2>
     <ul class="list-stripped">
-      <li v-for="task in tasks" v-if="task.completed">
+      <li v-for="task in tasks" v-if="task.completed" v-bind:key="task">
         {{task.description}}
         <span class="icon-danger" @click="isComplete(task, false)">
           <CancelIcon/>

@@ -61,7 +61,6 @@
 </template>
 
 <script>
-  import Aside from '@/components/admin/Aside'
   import Level from '@/components/admin/Level'
   import Card from '@/components/admin/Card'
 
@@ -89,11 +88,6 @@
       countTasks: function (id) {
         return this.tasks.filter(task => task.boardId === id).length
       }
-    },
-    computed: {
-      // countTasks: function (id) {
-      //   return this.tasks.filter(task => task.boardId == id).length
-      // }
     }
   }
 </script>
@@ -108,11 +102,9 @@
   .app-panel h2 {
     font-weight: bold;
     font-size: 26px;
-    /* margin-bottom: 10px; */
   }
   .app-task-count {
     margin-bottom: 20px;
-    /* font-size: 16px; */
   }
   Card {
     margin-bottom: 10px;

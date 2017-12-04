@@ -9,12 +9,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/guess-the-word',
       name: 'GuessTheWord',
       component: GuessTheWord
     },
     {
-      path: '/fetch-api',
+      path: '/',
       name: 'FetchAPI',
       component: FetchAPI
     },
