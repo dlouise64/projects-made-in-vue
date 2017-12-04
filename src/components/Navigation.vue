@@ -3,7 +3,7 @@
     <ul>
       <!-- <li><router-link to="/">Fetch API Demo</router-link></li> -->
       <li><router-link to="todo">Todo List Demo</router-link></li>
-      <li><router-link to="guess-the-word">Play Guess the word</router-link></li>
+      <li><router-link to="/">Play Guess the word</router-link></li>
     </ul>
   </nav>
 </template>
