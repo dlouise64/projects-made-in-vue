@@ -23,7 +23,7 @@ import InfiniteLoading from 'vue-infinite-loading'
 import axios from 'axios'
 import Card from '@/components/admin/Card'
 
-const api = '//jsonplaceholder.typicode.com/posts'
+const api = 'https://jsonplaceholder.typicode.com/posts'
 
 export default {
   name: 'FetchAPI',
